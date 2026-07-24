@@ -1,0 +1,14 @@
+.settings/
+Debug/
+Drivers/
+Core/Startup
+.cproject
+.mxproject
+.project
+*.launch
+*.ld
+*.png
+stm32*.*
+syscalls.c
+sysmem.c
+system*.c
