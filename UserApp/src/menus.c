@@ -91,7 +91,7 @@ void PinTestMenu(void)
 	char c;
 	uint16_t addr;
 	uint8_t data;
-	uint8_t ctl;
+	uint16_t ctl;
 	uint8_t status;
 
 	//INACTIVE
@@ -233,22 +233,22 @@ void PinTestMenu(void)
 					data ^= 0x0001;
 					break;
 				case 'O':
-					ctl ^= 0x01;
+					ctl ^= 0x0100;
 					break;
 				case 'P':
-					ctl ^= 0x02;
+					ctl ^= 0x0200;
 					break;
 				case 'Q':
-					ctl ^= 0x04;
+					ctl ^= 0x0400;
 					break;
 				case 'R':
-					ctl ^= 0x08;
+					ctl ^= 0x0800;
 					break;
 				case 'S':
-					ctl ^= 0x10;
+					ctl ^= 0x1000;
 					break;
 				case 'T':
-					ctl ^= 0x20;
+					ctl ^= 0x2000;
 					break;
 				case '-':
 					//set data direction in
@@ -275,7 +275,7 @@ void PinTestMenu(void)
 					;
 			}
 			GPIOD->ODR = addr;
-			GPIOC->ODR = (((uint16_t) ctl) << 8) | data;
+			GPIOC->ODR = ctl | data;
 		}
 		else
 		{
