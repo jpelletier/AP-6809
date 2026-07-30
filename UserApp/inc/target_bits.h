@@ -15,9 +15,9 @@
 #define BIT_RW	 	8
 #define BIT_E		9
 #define BIT_Q		10
-#define BIT_BS		9
-#define BIT_BA		10
-#define BIT_HALT	11
+#define BIT_BS		11
+#define BIT_BA		12
+#define BIT_HALT	13
 
 #define MASK_DMA	(1<<BIT_DMA)
 #define MASK_RESET	(1<<BIT_RESET)

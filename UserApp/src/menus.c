@@ -129,7 +129,7 @@ void PinTestMenu(void)
 	{
 		addr = GPIOD->ODR;
 		data = (GPIOC->ODR) & 0xFF;
-		ctl = ((GPIOC->ODR) >> 8) & 0x3F;
+		ctl = (GPIOC->ODR) & 0x3F00;
 		status = (GPIOE->IDR) & 0x3F;
 
 		//TARGET SPECIFIC VERTICAL POSITION
